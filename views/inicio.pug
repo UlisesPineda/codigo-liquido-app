@@ -1,0 +1,82 @@
+extends ./layout/index
+block content
+    header.main-page 
+        nav.site-logo 
+            .logo-container(title='Ir al inicio') 
+                img(src="/img/isotipo-principal.png", alt="Isotipo del site")
+    .section-gradient
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        .gradient-container
+            .gradient-one
+            .gradient-two
+            .gradient-three
+            .gradient-four
+            .gradient-five
+            .gradient-six
+            .gradient-seven
+            .interactive
+    section.home-sections.first-view-index
+        .title-section
+            h1 CÓDIGO LÍQUIDO
+            h2.text Desarollo Web Fullstack
+    section.home-sections
+        .about-section
+            h3 SOBRE ESTA AGENCIA DE DESARROLLO WEB
+            p Agencia de desarrollo web enfocada en la creación de aplicaciones y sitios que ofrezcan experiencias de usuario interactivas.
+            p Creación, diseño e implementación de acciones personalizadas para cada giro, acorde a las necesidades específicas de cada proyecto.
+            p Soy una agencia de un solo hombre, por lo que, siempre tendrás contacto directo con la dirección de tu proyecto.
+    section.home-sections
+        .portfolio-section
+            h3 MIS ÚLTIMOS DESARROLLOS
+            .card-web-site-container
+                .card-web-site
+                    .icon-site-portfolio.merkadeo
+                    h4 El Merkadeo
+                    p E-commerce profesional con panel de administración, registro de usuarios y plataforma de pagos integrada.
+                    a.portofolio-link(href="https://elmerkadeo.com" target='_blank' rel='nofollow noopener noreferrer' title='Ir al Merkadeo') Visitar Sitio
+                .card-web-site
+                    .icon-site-portfolio.conexia
+                    h4 Conexia Point
+                    p CRM para facilitar la interacción y comunicación directa con clientes desde una sola plataforma.
+                    a.portofolio-link(href="https://conexiapoint.com" target='_blank' rel='nofollow noopener noreferrer' title='Ir a Conexiapoint') Visitar Sitio
+                .card-web-site
+                    .icon-site-portfolio.credmex
+                    h4 Credito PyME México
+                    p Landing Page para broker financiero especializado en la gestión de financiamiento a empresas.
+                    a.portofolio-link(href="https://creditopymemexico.com" target='_blank' rel='nofollow noopener noreferrer' title='Ir a Crédito PyME México') Visitar Sitio
+    section.home-sections
+        .contact-section
+            h3 HABLEMOS DE TUS IDEAS
+            .form-container
+                form.form-site
+                    label.form-label(for="name") Nombre
+                    input.form-input(type="text", name="name", id="name")  
+                    label.form-label(for="phone") Teléfono
+                    input.form-input(type="text", name="phone", id="phone")  
+                    label.form-label(for="email") Correo
+                    input.form-input(type="text", name="email", id="email")  
+                    input.form-button(type="submit", value="Contáctame")
+                    span.form-message
+    footer 
+        nav.site-links-container
+            button.site-links.home-link(title='Inicio' data-link='home') INICIO
+                span.hover-line.hover-line-active
+            button.site-links(title='Acerca de Código Líquido' data-link='about') ACERCA DE
+                span.hover-line
+            button.site-links(title='Conoce mi trabajo' data-link='portfolio') PORTAFOLIO
+                span.hover-line
+            button.site-links(title='¡Escíbeme!' data-link='contact') CONTACTO
+                span.hover-line
+        nav.social-links-container
+            a.social-links.twitter(href='https://x.com/CodigoLiquido'  title='Sígueme en X')
+        nav.legal-icons-container
+            a.legal-icons.cookies(href="/politica-de-cookies"  title='Consulta la política de cookies') 
+            a.legal-icons.privacy(href="/politica-de-privacidad"  title='Consulta la política de privacidad') 

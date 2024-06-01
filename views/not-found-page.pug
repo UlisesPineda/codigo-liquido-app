@@ -1,0 +1,28 @@
+extends ./layout/index
+block content
+    header 
+        nav.site-logo
+            a.logo-container(href="/" title='Ir al inicio') 
+                img(src="/img/isotipo-principal.png", alt="Isotipo del site")
+    .section-gradient
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        .gradient-container
+            .gradient-one
+            .gradient-two
+            .gradient-three
+            .gradient-four
+            .gradient-five
+            .gradient-six
+            .gradient-seven
+            .interactive
+    section.legal-container
+        .not-found-content
+            h2 Aquí no está lo que buscabas
