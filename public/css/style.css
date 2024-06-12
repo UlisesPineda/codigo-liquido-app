@@ -118,6 +118,9 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
 }
+.github {
+    background-image: url(/img/github.png);
+}
 .twitter {
     background-image: url(/img/twitter.png);
 }
@@ -149,7 +152,6 @@ body {
     .site-links {
         width: 100px;
         font-size: 12px;
-        /* border: 1px solid white; */
     }
     .home-link {
         display: none;
@@ -359,7 +361,11 @@ svg {
 }
 /* ---------- ESTILOS SECCIÓN PRINCIPAL ---------- */
 .title-section {
-    width: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transition: opacity .9s ease-in-out, transform .9s ease-in-out;
 }
 .hide-title-section {
@@ -367,18 +373,24 @@ svg {
     transform: perspective( 2000px ) rotateX( 45deg ) translateY( -50vh );
 }
 .title-section h1,
-.title-section h2 {
+.title-section h2,
+.title-section p {
     text-align: center;
-    letter-spacing: 6px;
-    margin: 0;
+    margin: 10px 0;
     text-shadow: 4px 4px rgba(0,0,0,0.1);
 }
 .title-section h1 {
+    letter-spacing: 4px;
     font-size: 50px;
 }
-.title-section h2 {
+.text {
+    letter-spacing: 4px;
     font-size: 30px;
     color: var(--main-color);
+}
+.title-section h2 {
+    width: 60%;
+    font-size: 20px;
 }
 .simbols {
     color: white;
@@ -387,17 +399,25 @@ svg {
     .title-section h1 {
         font-size: 28px;
     }
-    .title-section h2 {
+    .text {
         font-size: 24px;
+    }
+    .title-section h2 {
+        font-size: 20px;
+        width: 70%;
     }
 }
 @media ( max-width: 480px ) {
     .title-section h1 {
-        font-size: 21px;
+        font-size: 22px;
+    }
+    .text {
+        font-size: 13px;
     }
     .title-section h2 {
         font-size: 12px;
-    }
+        width: 80%;
+    } 
 }
 
 /* ---------- ESTILOS SECCIONES DEL SITE ---------- */
@@ -437,16 +457,16 @@ svg {
 }
 @media ( max-width: 480px ) {
     .about-section {
-        width: 70%;
+        width: 60%;
     }
     .about-section * {
         width: 100%;
     }
     .about-section h3 {
-        font-size: 16px;
+        font-size: 14px;
     }
     .about-section p {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 /* Portofolio */
@@ -481,7 +501,6 @@ svg {
     text-align: center;
     padding: 0 20px;
     overflow: hidden;
-    border: 1px solid var(--main-color);
 }
 .card-web-site::after {
     top: 0;
@@ -491,7 +510,7 @@ svg {
     width: 100%;
     position: absolute;
     z-index: -1;
-    transform: translateY(100%);
+    transform: translateY(101%);
     background-color: rgba(0, 0, 0, .3);
     transition: transform .5s ease-in-out;
 }
@@ -635,6 +654,7 @@ svg {
     cursor: pointer;
     margin-top: 15px;
     background-color: var(--main-color);
+    text-shadow: 2px 2px rgba(0,0,0,0.1);
 }
 .form-button-blocked {
     opacity: .5;
@@ -727,6 +747,9 @@ svg {
 .not-found-content * {
     font-weight: 300;
 }
+.not-found-content h2 {
+    text-align: center;
+}
 @media ( max-width: 1024px ) {
     .legal-container {
         left: 0;
@@ -735,18 +758,18 @@ svg {
 }
 @media ( max-width: 480px ) {
     .legal-container {
-        height: calc(80vh - 70px);
+        height: calc(85vh - 70px);
     }    
     .legal-content {
-        width: 80%;
+        width: 60%;
     }
     .legal-content h1,
     .legal-content h2 {
-        font-size: 13px;
+        font-size: 12px;
     }
     .legal-content p,
     .legal-content small,
     .legal-container li {
-        font-size: 11px;
+        font-size: 10px;
     }
 }
