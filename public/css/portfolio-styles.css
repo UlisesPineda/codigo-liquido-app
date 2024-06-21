@@ -38,12 +38,30 @@
 .github {
     background-image: url(/img/github.png);
 }
-.linkedin {
-    background-image: url(/img/linkedin.png);
-}
 .liquidcode {
     background-image: url(/img/liquidcode.png);
 }
+@media ( max-width: 480px ) {
+    .header-portfolio {
+        position: initial;
+        width: 100%;
+    }
+}
+@media ( min-width: 481px ) and ( max-width: 1024px ) {
+    .header-portfolio {
+        width: 30vw;
+    }
+    .main-data-portfolio h1 span:nth-child(1) {
+        font-size: 30px;
+    }    
+    .main-data-portfolio h1 span.text-colored {
+        font-size: 26px;
+    }
+    .main-data-portfolio h2 {
+        font-size: 18px;
+    }
+}
+
 /* ---------- ESTILOS GENERALES DEL INFO MAIN ---------- */
 .main-info-portfolio {
     height: auto;
@@ -65,6 +83,24 @@
 .text-colored {
     color: var(--main-color);
 }
+@media ( max-width: 480px ) {
+    .main-info-portfolio {
+        width: 100%;
+        transform: translateX(0);
+    }
+    .main-info-portfolio section {
+        padding: 10%;
+    }
+    .about-info h3 {
+        font-size: 16px;
+    }
+    .about-info p {
+        font-size: 14px;
+    }
+}
+@media ( min-width: 481px ) and ( max-width: 1024px ) {
+}
+
 /* ---------- ESTILOS DE PROYECTOS ---------- */
 .data-card-container {
     margin: 10px 0 50px 0;
@@ -97,7 +133,7 @@ a.hover-title {
 .hover-title {
     transition: color .4s ease;
 }
-@media ( min-width: 480px ) {
+@media ( min-width: 1025px ) {
     .data-card-container:hover {
         background-color: rgba(255, 255, 255, .05);
         box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.2);
@@ -132,6 +168,67 @@ ul li {
     color: white;
     background-color: rgba(136, 219, 211, .6);
 }
+@media ( max-width: 480px ) {
+    .data-card-container {
+        margin: 10px 0;
+        padding: 20px;    
+    }
+    .work-info h3 {
+        font-size: 16px;
+    }
+    .img-card-container {
+        height: 60px;
+        opacity: 1;
+        filter: none;
+    }   
+    a.title-link-card,
+    .data-card-container em.hover-title {
+        font-size: 14px;
+        color: var(--main-color);
+    } 
+    .data-card-container p {
+        font-size: 12px;
+    }
+    .data-card-container li {
+        font-size: 12px;
+    }
+    .buttons-tech-container {
+        margin-top: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    }
+    .button-tech {
+        padding: 4px;
+        font-size: 10px;
+    }
+}
+@media ( min-width: 481px ) and ( max-width: 1024px ) {
+    a.title-link-card {
+        font-size: 18px;
+        color: var(--main-color);
+    }
+    .img-card-container {
+        opacity: 1;
+        filter: none;
+    }
+    .hover-title {
+        color: var(--main-color);
+    }   
+}
+/* ---------- ESTILOS DE ABOUT TECH ---------- */
+@media ( max-width: 480px ) {
+    .about-tech-areas h3 {
+        font-size: 16px;
+    }
+    .about-tech-areas p {
+        font-size: 12px;
+    }
+}
+@media ( min-width: 481px ) and ( max-width: 1024px ) {
+    .about-tech-areas  h3 {
+        font-size: 16px;
+    }
+}
+
 /* ---------- ESTILOS DE CONTACTO ---------- */
 .data-contact {
     display: flex;
@@ -139,4 +236,9 @@ ul li {
 }
 .email {
     background-image: url(/img/email.png);
+}
+@media ( max-width: 480px ) {
+    .contact-form h3 {
+        font-size: 16px;
+    }
 }
