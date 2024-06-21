@@ -140,18 +140,14 @@ html::-webkit-scrollbar-thumb,
     background-repeat: no-repeat;
     transition: opacity .4s ease-in-out;
 }
-.social-links {
-    display: none;
-    visibility: hidden;
-}
 @media ( min-width: 480px ) {
     .legal-icons:hover,
     .social-links:hover {
         opacity: 1;
     }
 }
-.github {
-    background-image: url(/img/github.png);
+.linkedin {
+    background-image: url(/img/linkedin.png);
 }
 .portfolio {
     background-image: url(/img/portfolio.png);
