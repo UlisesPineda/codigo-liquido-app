@@ -4,7 +4,7 @@ const {
     mainPage,
     privacyPage,
     cookiesPage,
-    notFoundPage
+    notFoundPage,
 } = require('./controllers.js');
 
 const router = express.Router();

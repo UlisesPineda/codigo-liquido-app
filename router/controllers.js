@@ -1,15 +1,15 @@
-const urlImgRSS = '/img/imagen-rss.png';
-
 let title;
 let description;
 let robots;
 let canonical;
+let urlImgRSS
 
 const mainPage = ( req, res ) => {
     title = 'Código Líquido || Desarrollo Web Fullstack';
     description = 'Especialista en desarrollo web fullstack. Proyectos de alta calidad con tecnologías avanzadas, desde el diseño UX/UI hasta la integración de APIs y bases de datos.';
     robots = 'all, max-image-preview:large';
     canonical = 'https://codigoliquido.com';
+    urlImgRSS = '/img/imagen-rss.png';
 
     res.render('inicio', {
         title,
@@ -25,6 +25,7 @@ const privacyPage = ( req, res ) => {
     description = 'Especialista en desarrollo web fullstack. Proyectos de alta calidad con tecnologías avanzadas, desde el diseño UX/UI hasta la integración de APIs y bases de datos.';
     robots = 'noindex, nofollow, max-image-preview:large';
     canonical = 'https://codigoliquido.com/politica-de-privacidad';
+    urlImgRSS = '/img/imagen-rss.png';
 
     res.render('privacy-page', {
         title,
@@ -40,6 +41,7 @@ const cookiesPage = ( req, res ) => {
     description = 'Especialista en desarrollo web fullstack. Proyectos de alta calidad con tecnologías avanzadas, desde el diseño UX/UI hasta la integración de APIs y bases de datos.';
     robots = 'noindex, nofollow, max-image-preview:large';
     canonical = 'https://codigoliquido.com/politica-de-cookies';
+    urlImgRSS = '/img/imagen-rss.png';
 
     res.render('cookies-page', {
         title,
@@ -55,6 +57,7 @@ const notFoundPage = ( req, res ) => {
     description = 'Especialista en desarrollo web fullstack. Proyectos de alta calidad con tecnologías avanzadas, desde el diseño UX/UI hasta la integración de APIs y bases de datos.';
     robots = 'noindex, nofollow, max-image-preview:large';
     canonical = 'https://codigoliquido.com';
+    urlImgRSS = '/img/imagen-rss.png';
 
     res.render('not-found-page', {
         title,
@@ -69,5 +72,5 @@ module.exports = {
     mainPage,
     privacyPage,
     cookiesPage,
-    notFoundPage
+    notFoundPage,
 };
