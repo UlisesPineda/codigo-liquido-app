@@ -1,0 +1,146 @@
+extends ./layout/index
+block content
+    .section-gradient
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        .gradient-container
+            .gradient-one
+            .gradient-two
+            .gradient-three
+            .gradient-four
+            .gradient-five
+            .gradient-six
+            .gradient-seven
+            .interactive
+    header.header-portfolio 
+        .main-data-portfolio
+            h1 <span>Ulises Pineda</span><br> <span class="text-colored">Desarrollador Web Fullstack</span>
+            h2 Especailizado en Javascript con la tecnología <span class="text-colored">MERN</span>
+            nav.link-rss-container  
+                a(href="https://github.com/UlisesPineda", target="_blank", rel="noopener noreferrer nofollow" title="Stalkea mi código").icon-rss.github 
+                a(href="https://www.linkedin.com/in/ulisespinedam/", target="_blank", rel="noopener noreferrer nofollow" title="Mi perfil profesional").icon-rss.linkedin
+                a(href="/", title="Ir a Código Líquido").icon-rss.liquidcode
+    section.main-info-portfolio 
+        section.about-info 
+            h3 Sobre Mí
+            p Desarrollador web autodidacta con estudios en diseño gráfico y una larga carrera en el sector financiero.
+            p <span class="text-colored">2018</span> Encuentro mi pasión por el desarrollo web, siendo el SEO y Wordpress mi primer contacto con el mundo web, HTML y CSS son mi primer encuentro con la semántica web. 
+            p <span class="text-colored">2020</span> Conocer la manera de interactuar y modificar los sitios web me lleva a la necesidad de programar, comienzo a aprender JS en mi tiempo libre.
+            p <span class="text-colored">2021</span> Con React y Node inicio el desarrollo fullstack, comienzo mi especialización en estas tecnologías.
+            p <span class="text-colored">2022</span> Doy el paso definitivo y decido terminar mi actividad en el sector financiero para dedicarme de lleno al desarrollo web como freelance.
+        section.work-info
+            h3 Mis trabajos recientes
+            article.card-container 
+                .data-card-container
+                    a(href="https://elmerkadeo.com", target="_blank", rel="noopener noreferrer" title="Dale un vistazo al trabajo").title-link-card.hover-title El Merkadeo
+                        .img-card-container 
+                            img(src="/img/elmerkadeo.png", alt="Sitio web el merkadeo")
+                    p Solución de e-commerce que ofrece un sistema completo de administración tanto para el usuario como para el administrador de la plataforma.
+                    em.hover-title Características destacadas de la webapp:
+                    ul 
+                        li Rutas protegidas
+                        li Registro de nuevo usuario
+                        li Contraseñas encriptadas
+                        li Recuperación segura de contraseñas
+                        li Cierre de sesión por inactividad
+                        li Rest API
+                        li Carrito de compras
+                        li Pasarela de pago con Stripe
+                        li Panel de usuario
+                        li Registro de compras
+                        li Panel de administrador
+                        li Edición y creación de productos
+                        li Edición y creación de categorías
+                        li Edición y creación de promociones
+                        li URL's dinámicas para cada producto
+                        li DB en Mongo
+                        li DB Firebase para multimedia
+                    .buttons-tech-container 
+                        span.button-tech React
+                        span.button-tech React Router
+                        span.button-tech Redux 
+                        span.button-tech Node
+                        span.button-tech Express 
+                        span.button-tech JWT 
+                        span.button-tech Bcrypt 
+                        span.button-tech Nodemailer 
+                        span.button-tech Axios 
+                        span.button-tech Firebase 
+                        span.button-tech MongoDB 
+            article.card-container 
+                .img-card-container 
+                .data-card-container
+                    a(href="https://conexiapoint.com", target="_blank", rel="noopener noreferrer" title="Dale un vistazo al trabajo").title-link-card.hover-title Conexia Point
+                        .img-card-container 
+                            img(src="/img/conexiapoint.png", alt="Sitio web conexiapoint")
+                    p Solución de CRM para el almacenamiento e interacción con clientes y contactos.
+                    em.hover-title Características destacadas de la webapp:
+                    ul 
+                        li Rutas protegidas
+                        li Registro de nuevo usuario
+                        li Confirmación de registro
+                        li Contraseñas encriptadas
+                        li Rest API
+                        li Recuperación segura de contraseñas
+                        li Cierre de sesión por inactividad
+                        li Panel de usuario personalizable
+                        li DB en Mongo
+                        li DB Firebase para multimedia
+                    .buttons-tech-container 
+                        span.button-tech React
+                        span.button-tech React Router
+                        span.button-tech Redux 
+                        span.button-tech Node
+                        span.button-tech Express 
+                        span.button-tech JWT 
+                        span.button-tech Bcrypt 
+                        span.button-tech Nodemailer 
+                        span.button-tech Axios 
+                        span.button-tech Firebase 
+                        span.button-tech MongoDB 
+            article.card-container 
+                .img-card-container 
+                .data-card-container
+                    a(href="https://creditopymemexico.com", target="_blank", rel="noopener noreferrer" title="Dale un vistazo al trabajo").title-link-card.hover-title Crédito PyME México
+                        .img-card-container 
+                            img(src="/img/credmex.png", alt="Sitio web Crédito PyMe México")
+                    p Landing page creada para apoyar el crecimiento comercial de broker financiero.
+                    em.hover-title Características destacadas de la webapp:
+                    ul 
+                        li Formulario de contacto
+                        li Diseño personalizado
+                    .buttons-tech-container 
+                        span.button-tech React
+                        span.button-tech React Router
+                        span.button-tech Node
+                        span.button-tech Axios 
+                        span.button-tech Javascript
+        section.about-tech-areas 
+            h3 Áreas de interés
+            p Mi especialidad actual, está basada en el entorno de Javascript, en la tecnología MERN, sin embargo, las siguientes tecnologías también están dentro de mi interés y son parte de mi stack de aprendizaje a corto plazo:
+            .buttons-tech-container 
+                span.button-tech AWS
+                span.button-tech Python
+                span.button-tech SQL
+                span.button-tech React Native 
+            h3 En proceso de aprendizaje
+            p Como parte de mi formación y especialización, en este momento estoy desarrollando mi conocimiento en las siguientes tecnologías:
+            .buttons-tech-container 
+                span.button-tech Next.js
+                span.button-tech Typescript
+                span.button-tech Jest
+                span.button-tech Tailwind
+        section.contact-form
+            h3 Contacto
+            .data-contact 
+                a(href="mailto:ulises@codigoliquido.com", target="_blank", rel="noopener noreferrer nofollow" title="Envíame un correo").icon-rss.email 
+                span.text-contact ulises@codigoliquido.com
+
+

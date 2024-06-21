@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400&display=swap');
+@import url('./portfolio-styles.css');
 
 :root {
     --color-bg1: rgb(108, 0, 162);
@@ -10,9 +11,9 @@
     --color-sky: 132, 182, 244;
     --color-interactive: 140, 100, 255;
     --circle-size: 100%;
-    /* --blending: hard-light; */
     --blending: color-burn;
-    --main-color: #88dbd3
+    --main-color: #88dbd3;
+    --color-scrollbar: #2F3245;
 }
 
 /* ---------- ESTILOS GENERALES ---------- */
@@ -21,7 +22,27 @@ body {
     font-style: normal;
     color: white;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+html,
+.main-info-portfolio {
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) var(--color-scrollbar);
+}
+html::-webkit-scrollbar,
+.main-info-portfolio::-webkit-scrollbar {
+    width: 10px
+}
+html::-webkit-scrollbar-track
+.main-info-portfolio::-webkit-scrollbar-track {
+    background-color: var(--color-scrollbar)
+}
+html::-webkit-scrollbar-thumb,
+.main-info-portfolio::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar);
+    border-radius: 20px;
+    border: 1px solid var(--color-scrollbar)
 }
 /* ---------- ESTILOS DE LA NAVEGACIÓN ---------- */
 
@@ -111,17 +132,29 @@ body {
 }
 .social-links,
 .legal-icons {
-    height: 25px;
+    opacity: .4;
     width: 25px;
+    height: 25px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: opacity .4s ease-in-out;
+}
+.social-links {
+    display: none;
+    visibility: hidden;
+}
+@media ( min-width: 480px ) {
+    .legal-icons:hover,
+    .social-links:hover {
+        opacity: 1;
+    }
 }
 .github {
     background-image: url(/img/github.png);
 }
-.twitter {
-    background-image: url(/img/twitter.png);
+.portfolio {
+    background-image: url(/img/portfolio.png);
 }
 .cookies {
     background-image: url(/img/cookies.png);
@@ -169,6 +202,7 @@ body {
     top: 0;
     left: 0;
     background-image: linear-gradient(to right top, #282828, #2b2b2e, #2e2e34, #30323a, #323541, #323542, #313644, #313645, #2e3342, #2c313e, #292e3b, #272c38);
+    z-index: -1;
 }
 .gradient-container {
     position: relative;
@@ -296,7 +330,7 @@ body {
     top: -50%;
     left: -50%;
 
-    opacity: 0.7;
+    opacity: 0.5;
 }
 svg {
     display: none;
@@ -337,13 +371,14 @@ svg {
 }
 /* ---------- ESTILOS GENERALES SECCIONES ---------- */
 .home-sections {
-    height: 100vh;
+    height: 98vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
+    overflow-y: hidden;
 }
 .home-sections * {
     font-weight: 300;

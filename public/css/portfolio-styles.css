@@ -1,0 +1,142 @@
+/* ---------- ESTILOS GENERALES DEL DATA MAIN ---------- */
+.header-portfolio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40vw;
+}
+.main-data-portfolio {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 20%;
+    gap: 5%;
+    box-sizing: border-box;
+}
+.main-data-portfolio h1 span:nth-child(1) {
+    font-size: 36px;
+}
+.main-data-portfolio h2 {
+    font-weight: 300;
+}
+.link-rss-container {
+    display: flex;
+    gap: 30px;
+}
+.icon-rss {
+    height: 30px;
+    width: 30px;
+    opacity: .5;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity .4s ease-in-out;
+}
+.github {
+    background-image: url(/img/github.png);
+}
+.linkedin {
+    background-image: url(/img/linkedin.png);
+}
+.liquidcode {
+    background-image: url(/img/liquidcode.png);
+}
+/* ---------- ESTILOS GENERALES DEL INFO MAIN ---------- */
+.main-info-portfolio {
+    height: auto;
+    width: 60vw;
+    transform: translateX(39vw);
+    overflow-y: auto;
+}
+.main-info-portfolio section {
+    display: block;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10% 15% 10% 20%;
+    box-sizing: border-box;
+    font-weight: 300;
+}
+.text-colored {
+    color: var(--main-color);
+}
+/* ---------- ESTILOS DE PROYECTOS ---------- */
+.data-card-container {
+    margin: 10px 0 50px 0;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .02);
+    transition: background-color .4s ease-in-out, box-shadow .4s ease-in-out;
+}
+.img-card-container {
+    height: 80px;
+    width: auto;
+    opacity: .3;
+    filter: blur(1px);
+    transition: opacity .4s ease-in-out, filter .4s ease-in-out;
+}
+.img-card-container img {
+    height: 100%;
+}
+.title-link-card {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+a.hover-title {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+.hover-title {
+    transition: color .4s ease;
+}
+@media ( min-width: 480px ) {
+    .data-card-container:hover {
+        background-color: rgba(255, 255, 255, .05);
+        box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.2);
+    }
+    .data-card-container:hover .hover-title {
+        color: var(--main-color);
+    }
+    .data-card-container:hover .img-card-container {
+        opacity: 1;
+        filter: grayscale(0);
+    }    
+    .icon-rss:hover {
+        opacity: 1;
+    }    
+}
+ul li {
+    list-style-type: none;
+    font-size: 14px;
+}
+.buttons-tech-container {
+    margin-top: 30px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+.button-tech {
+    padding: 5px;
+    font-size: 11px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: now-rap;
+    color: white;
+    background-color: rgba(136, 219, 211, .6);
+}
+/* ---------- ESTILOS DE CONTACTO ---------- */
+.data-contact {
+    display: flex;
+    gap: 10px;
+}
+.email {
+    background-image: url(/img/email.png);
+}

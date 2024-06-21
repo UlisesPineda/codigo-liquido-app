@@ -68,9 +68,26 @@ const notFoundPage = ( req, res ) => {
     });
 };
 
+const portfolioPage = ( req, res ) => {
+    title = 'Ulises Pineda || Desarrollador Web Fullstack';
+    description = 'Especialista en desarrollo web fullstack. Proyectos de alta calidad con tecnologías avanzadas, desde el diseño UX/UI hasta la integración de APIs y bases de datos, desde una landing page hasta complejos sistemas web comerciales y empresariales.';
+    robots = 'all, max-image-preview:large';
+    canonical = 'https://codigoliquido.com/portafolio';
+    urlImgRSS = '/img/imagen-rss-ulises-pineda.png';
+
+    res.render('portfolio-page', {
+        title,
+        description,
+        robots,
+        canonical,
+        urlImgRSS,
+    });
+};
+
 module.exports = {
     mainPage,
     privacyPage,
     cookiesPage,
+    portfolioPage,
     notFoundPage,
 };
