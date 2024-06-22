@@ -1,8 +1,9 @@
+let siteLanguage;
 let title;
 let description;
 let robots;
 let canonical;
-let urlImgRSS
+let urlImgRSS;
 
 const mainPage = ( req, res ) => {
     title = 'Código Líquido || Desarrollo Web Fullstack';
@@ -10,6 +11,7 @@ const mainPage = ( req, res ) => {
     robots = 'all, max-image-preview:large';
     canonical = 'https://codigoliquido.com';
     urlImgRSS = '/img/imagen-rss.png';
+    siteLanguage = "es";
 
     res.render('inicio', {
         title,
@@ -17,6 +19,7 @@ const mainPage = ( req, res ) => {
         robots,
         canonical,
         urlImgRSS,
+        siteLanguage,
     });
 };
 
@@ -26,6 +29,7 @@ const privacyPage = ( req, res ) => {
     robots = 'noindex, nofollow, max-image-preview:large';
     canonical = 'https://codigoliquido.com/politica-de-privacidad';
     urlImgRSS = '/img/imagen-rss.png';
+    siteLanguage = "es";
 
     res.render('privacy-page', {
         title,
@@ -33,6 +37,7 @@ const privacyPage = ( req, res ) => {
         robots,
         canonical,
         urlImgRSS,
+        siteLanguage,
     });
 };
 
@@ -42,6 +47,7 @@ const cookiesPage = ( req, res ) => {
     robots = 'noindex, nofollow, max-image-preview:large';
     canonical = 'https://codigoliquido.com/politica-de-cookies';
     urlImgRSS = '/img/imagen-rss.png';
+    siteLanguage = "es";
 
     res.render('cookies-page', {
         title,
@@ -58,6 +64,7 @@ const notFoundPage = ( req, res ) => {
     robots = 'noindex, nofollow, max-image-preview:large';
     canonical = 'https://codigoliquido.com';
     urlImgRSS = '/img/imagen-rss.png';
+    siteLanguage = "es"
 
     res.render('not-found-page', {
         title,
@@ -65,15 +72,17 @@ const notFoundPage = ( req, res ) => {
         robots,
         canonical,
         urlImgRSS,
+        siteLanguage
     });
 };
 
 const portfolioPage = ( req, res ) => {
-    title = 'Ulises Pineda || Desarrollador Web Fullstack';
-    description = 'Especialista en desarrollo web fullstack. Proyectos de alta calidad con tecnologías avanzadas, desde el diseño UX/UI hasta la integración de APIs y bases de datos, desde una landing page hasta complejos sistemas web comerciales y empresariales.';
+    title = 'Ulises Pineda || Fullstack Web Developer';
+    description = 'Fullstack web development specialist. High quality projects with advanced technologies, from UX/UI design to API and database integration, from landing page to complex commercial and enterprise web systems.';
     robots = 'all, max-image-preview:large';
     canonical = 'https://codigoliquido.com/portafolio';
     urlImgRSS = '/img/imagen-rss-ulises-pineda.png';
+    siteLanguage = "en"
 
     res.render('portfolio-page', {
         title,
@@ -81,6 +90,7 @@ const portfolioPage = ( req, res ) => {
         robots,
         canonical,
         urlImgRSS,
+        siteLanguage
     });
 };
 
